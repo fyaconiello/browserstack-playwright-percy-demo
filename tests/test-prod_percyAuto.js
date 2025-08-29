@@ -40,6 +40,7 @@ pages.forEach(({ name, url }) => {
     const browser = testInfo.project.name; // e.g., chromium / firefox / webkit
     await percyScreenshot(page, `${name} - ${browser}`, {
       widths: ["414", "768", "1024", "1280"],
+      fullPage: true,
     });
     await page.waitForTimeout(500); // just to be sure
   });
