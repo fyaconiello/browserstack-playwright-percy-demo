@@ -4,15 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sample-test": "npx browserstack-node-sdk playwright test --config=./playwright.config.js",
-    "sample-local-test": "npx browserstack-node-sdk playwright test --config=./playwright.local.config.js",
+    "sample-test": "npx browserstack-node-sdk playwright test tests/test-prod_percyAuto.js --config=./playwright.config.js",
+    "percy-test": "npx percy exec -- npx browserstack-node-sdk playwright test tests/test-prod_percyAuto.js --config=./playwright.config.js",
+    "sample-local-test": "npx percy exec -- npx browserstack-node-sdk playwright test test_staging_percyAuto.js --config=./playwright.local.config.js",
     "postinstall": "npm update browserstack-node-sdk"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "latest",
-    "browserstack-node-sdk": "latest"
+    "@percy/cli": "^1.31.1",
+    "@percy/playwright": "^1.0.9",
+    "@playwright/test": "^1.53.0",
+    "browserstack-node-sdk": "^1.42.0",
+    "playwright-core": "^1.53.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1"
   }
 }

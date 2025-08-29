@@ -1,6 +1,34 @@
-node_modules
-playwright-report
-test-results
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log
 log/
-package-lock.json
-local.log
+output_*.log
+
+# Test results
+test-results/
+playwright-report/
+
+# Build outputs
+dist/
+build/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp

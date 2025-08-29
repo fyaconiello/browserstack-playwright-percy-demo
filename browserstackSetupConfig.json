@@ -1,0 +1,32 @@
+userName: colab2
+accessKey: AbfVxy5DHMGktKjbspZt
+projectName: Colab - PercyPlaywrightNodeJS
+buildName: SmokeTest - PlaywrightNodeJS
+buildIdentifier: ''
+platforms:
+  - os: Windows
+    osVersion: 11
+    browserName: chrome
+    browserVersion: '139'
+  - os: Windows
+    osVersion: 11
+    browserName: playwright-firefox
+    browserVersion: '139'
+  - os: OS X
+    osVersion: Sonoma
+    browserName: playwright-webkit
+    browserVersion: '18.2'
+parallelsPerPlatform: 1
+framework: playwright
+source: node-js-playwright-sample-sdk:v1
+consoleLogs: info
+debug: true
+testObservability: true
+testContextOptions:
+  skipSessionStatus: false
+  skipSessionName: false
+browserstackLocal: false
+logDir: /Users/francis/Downloads/Colab - Test/log
+browserStackLocalOptions:
+  skipBinaryInitialisation: false
+proxySettings: {}
